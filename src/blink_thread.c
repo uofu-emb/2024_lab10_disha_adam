@@ -12,8 +12,10 @@ bool on = false;
 #define BLINK_TASK_PRIORITY     ( tskIDLE_PRIORITY + 2UL )
 #define BLINK_TASK_STACK_SIZE configMINIMAL_STACK_SIZE
 
-void blink_task(__unused void *params) {
-    while (true) {
+void blink_task(__unused void *params) 
+{
+    while (true) 
+    {
         gpio_put(4, on);
         vTaskDelay(500);
         on = !on;
