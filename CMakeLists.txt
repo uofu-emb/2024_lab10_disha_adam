@@ -27,6 +27,12 @@ else()
     set(UNITY_PATH lib/unity)
 endif()
 
+if(DEFINED ENV{PICO_EXTRAS_PATH})
+    set(PICO_EXTRAS_PATH $ENV{PICO_EXTRAS_PATH})
+else()
+    set(PICO_EXTRAS_PATH lib/pico-extras)
+endif()
+
 # ====================================================================================
 cmake_minimum_required(VERSION 3.13)
 
@@ -42,6 +48,9 @@ include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # This imports the library configuration for FreeRTOS
 include(${FREERTOS_PATH}/portable/ThirdParty/GCC/RP2040/FreeRTOS_Kernel_import.cmake)
+
+# We also need PICO EXTRAS
+include(${PICO_EXTRAS_PATH}/external/pico_extras_import.cmake)
 
 # This sets up the unity library. They don't provide a library export, so it's defined locally.
 include(unity.cmake)
