@@ -1,6 +1,6 @@
 # This is the main binary. List your C files here.
 add_executable(hello_sleep_alarm
-    hello_sleep_alarm.c
+    blink_thread.c
     )
 
 pico_set_program_name(hello_sleep_alarm "test")

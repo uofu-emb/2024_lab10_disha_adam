@@ -30,7 +30,7 @@ endif()
 if(DEFINED ENV{PICO_EXTRAS_PATH})
     set(PICO_EXTRAS_PATH $ENV{PICO_EXTRAS_PATH})
 else()
-    set(PICO_EXTRAS_PATH lib/pico-extras)
+    set(PICO_EXTRAS_PATH ${CMAKE_CURRENT_LIST_DIR}/lib/pico-extras)
 endif()
 
 # ====================================================================================
