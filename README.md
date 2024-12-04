@@ -1,6 +1,8 @@
 # Default Register Values
 WAKE_EN all 1
+
 SLEEP_EN all 1
+
 ENABLE 0
 
 # Power Consumption
