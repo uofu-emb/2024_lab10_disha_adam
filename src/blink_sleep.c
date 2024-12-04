@@ -29,11 +29,3 @@ int main()
         sleep_ms(LED_DELAY_MS);
     }
 }
-
-
-//Default register values
-/*
-WAKE_EN all 1
-SLEEP_EN all 1
-ENABLE 0
-*/
